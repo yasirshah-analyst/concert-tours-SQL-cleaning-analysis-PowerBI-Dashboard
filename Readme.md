@@ -55,11 +55,9 @@ FROM female_tours_dirty;
 
 [View Raw Dataset](Data/Raw/female_tours_dirty.csv.csv)
 
-- **Cleaned dataset (processed using SQL)**
-
 ---
 
-
+- **Cleaned dataset (processed using SQL)**
 
 ## 🧹 Data Cleaning Process (SQL)
 
@@ -263,6 +261,10 @@ RENAME COLUMN average_gross TO "average_gross($)";
 SELECT *
 FROM female_tours_clean;
 ```
+
+## Cleaned Data
+
+[View Cleaned Dataset](Data/Clean/female_tours_clean.csv.csv)
 
 ---
 
