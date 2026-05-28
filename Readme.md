@@ -50,6 +50,11 @@ CREATE TABLE female_tours_dirty (
 SELECT * 
 FROM female_tours_dirty;
 ```
+
+**Raw Data**
+Screenshot:
+![Raw](Data/Raw/female_tours_dirty.csv.csv)
+
 - **Cleaned dataset (processed using SQL)**
 
 ---
