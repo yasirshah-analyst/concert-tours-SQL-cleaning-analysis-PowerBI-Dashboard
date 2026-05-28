@@ -26,6 +26,30 @@ The dataset contains information about female concert tours, including:
 
 Two versions of the dataset are used:
 - **Dirty dataset (raw)**
+
+```sql
+-- =========================================================
+-- 1. CREATE RAW (DIRTY) TABLE
+-- =========================================================
+-- Store the original uncleaned dataset.
+
+CREATE TABLE female_tours_dirty (
+    rank TEXT,
+    peak TEXT,
+    all_time_peak TEXT,
+    actual_gross TEXT,
+    adjusted_gross TEXT,
+    artist TEXT,
+    tour_title TEXT,
+    years TEXT,
+    shows TEXT,
+    average_gross TEXT,
+    ref TEXT
+);
+
+SELECT * 
+FROM female_tours_dirty;
+```
 - **Cleaned dataset (processed using SQL)**
 
 ---
