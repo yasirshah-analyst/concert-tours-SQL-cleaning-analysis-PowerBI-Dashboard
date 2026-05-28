@@ -275,17 +275,60 @@ The project answers key business questions:
 ### 1. Top Revenue Artists
 Identify artists with the highest total revenue.
 
+```sql
+SELECT artist,
+       SUM("actual_gross($)") AS total_revenue
+FROM female_tours_clean
+GROUP BY artist
+ORDER BY total_revenue DESC
+LIMIT 5;
+```
+
 ### 2. Highest Grossing Tours
 Find the most successful tours based on revenue.
+
+```sql
+SELECT tour_title,
+       artist,
+       SUM("actual_gross($)") AS total_revenue
+FROM female_tours_clean
+GROUP BY tour_title, artist
+ORDER BY total_revenue DESC
+LIMIT 10;
+```
 
 ### 3. Shows vs Revenue Relationship
 Analyze whether more shows lead to higher revenue.
 
+```sql
+SELECT shows,
+       SUM("actual_gross($)") AS total_revenue
+FROM female_tours_clean
+GROUP BY shows
+ORDER BY shows;
+```
+
 ### 4. Revenue Trends Over Time
 Track how tour revenue changes by year.
 
+```sql
+SELECT start_year,
+       SUM("actual_gross($)") AS total_revenue
+FROM female_tours_clean
+GROUP BY start_year
+ORDER BY start_year;
+```
+
 ### 5. Average Performance by Artist
 Compare average gross earnings per artist.
+
+```sql
+SELECT artist,
+       AVG("actual_gross($)") AS avg_gross
+FROM female_tours_clean
+GROUP BY artist
+ORDER BY avg_gross DESC;
+```
 
 ---
 
