@@ -51,9 +51,9 @@ SELECT *
 FROM female_tours_dirty;
 ```
 
-**Raw Data**
-Screenshot:
-![Raw](Data/Raw/female_tours_dirty.csv.csv)
+## Raw Data
+
+[View Raw Dataset](Data/Raw/female_tours_dirty.csv)
 
 - **Cleaned dataset (processed using SQL)**
 
