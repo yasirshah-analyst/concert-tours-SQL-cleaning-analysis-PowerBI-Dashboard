@@ -7,13 +7,33 @@ The goal is to transform raw, messy data into a clean, structured dataset and ex
 
 ---
 
+## 🎯 Business Problem
+
+*(Simulated scenario — this is a public practice dataset, not a real client engagement, but the project is framed the way a real stakeholder request would be.)*
+
+A concert promotion / talent-booking agency wants to understand which female artists and tours have historically generated the most revenue, so leadership can:
+
+- Prioritize which artists to court for future tour partnerships
+- Decide whether more shows or fewer, higher-value shows drive better returns
+- Understand whether revenue is growing or shrinking across recent years
+
+The raw data (sourced from Kaggle) arrives in a messy, inconsistent format — currency symbols, footnotes, broken rankings, and combined year ranges — so it isn't usable for analysis until it's cleaned.
+
+## 🎯 Objective
+
+1. Clean and standardize the raw dataset using SQL
+2. Answer 5 core business questions about revenue, tours, and artists
+3. Translate the SQL output into insights and recommendations a non-technical stakeholder could act on
+
+---
+
 ## 🗂️ Dataset Description
 
-- Source: Kaggle
-- Dataset Name: Dirty Dataset for Data Cleaning Practice
-- Link: https://www.kaggle.com/datasets/amruthayenikonda/dirty-dataset-to-practice-data-cleaning
-- Description: A purposely messy dataset containing concert tour data, designed for practicing data cleaning skills. It includes inconsistencies such as  symbols, missing values, incorrect formats, and duplicate rankings.
-- License: CC0: Public Domain
+- **Source:** Kaggle
+- **Dataset Name:** Dirty Dataset for Data Cleaning Practice
+- **Link:** [Kaggle - Dirty Dataset to Practice Data Cleaning](https://www.kaggle.com/datasets/amruthayenikonda/dirty-dataset-to-practice-data-cleaning)
+- **Description:** A purposely messy dataset containing concert tour data, designed for practicing data cleaning skills. It includes inconsistencies such as symbols, missing values, incorrect formats, and duplicate rankings.
+- **License:** CC0: Public Domain
 
 The dataset contains information about female concert tours, including:
 
@@ -23,6 +43,40 @@ The dataset contains information about female concert tours, including:
 - Number of shows
 - Tour years
 - Ranking information
+
+---
+
+## 📁 Project Structure
+
+```
+concert-tours-sql-analysis/
+│
+├── SQL/
+│   └── female_tours_sql_project.sql
+│
+├── Data/
+│   ├── Raw/
+│   │   └── female_tours_dirty.csv.csv
+│   │
+│   └── Clean/
+│       └── female_tours_clean.csv.csv
+│
+└── Readme.md
+```
+
+---
+
+## 🧭 Methodology (Step-by-Step Process)
+
+1. **Define the problem** — identify the business question(s) the data can answer
+2. **Load raw data** — import the dataset as-is, untouched, into a staging table
+3. **Clean the data** — remove symbols, fix data types, rebuild broken columns, split combined fields
+4. **Analyze** — write SQL queries against the cleaned table to answer each business question
+5. **Interpret** — turn query results into plain-language findings
+6. **Recommend** — translate findings into actions a stakeholder could take
+7. **Report** — document the process and results (this README)
+
+---
 
 Two versions of the dataset are used:
 - **Dirty dataset (raw)**
@@ -351,34 +405,15 @@ ORDER BY avg_gross DESC;
 
 ---
 
-## 📁 Project Structure
+## 🔍 Findings (Insights)
 
-```id="proj1"
-female-concert-tours-sql-analysis/
-│
-├── SQL/
-│   └── female_tours_sql_project.sql
-│
-├── Data/
-│   ├── Clean/
-│   │       └── female_tours_clean.csv
-│   │
-│   └── Raw/
-│       └── female_tours_dirty.csv
-│           
-│
-└── README.md
-```
-
-
----
-
-## 🚀 Key Insights
-
-- A few artists dominate total revenue generation
-- Number of shows does not always guarantee higher revenue
-- Tour duration impacts total earnings
-- Revenue varies significantly across years
+| # | Finding | Supporting Query |
+|---|---|---|
+| 1 | Revenue is concentrated in a small number of top artists — the top 5 account for roughly **_85 %_** of total revenue in the dataset | Q1 |
+| 2 | The single highest-grossing tour was **_"The Eras Tour"_**, generating **$_780000000_** | Q2 |
+| 3 | More shows does not reliably mean more revenue — e.g. **_"The Eras Tour" had fewer shows but higher total revenue than "Living Proof: The Farewell Tour" which had most shows_** | Q3 |
+| 4 | Revenue peaked in **_2023_** and was lowest in **_2006_** | Q4 |
+| 5 | **_"Taylor Swift"_** had the highest average revenue per tour, even if not the highest total — suggesting consistency over volume | Q5 |
 
 ---
 
