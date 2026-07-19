@@ -283,6 +283,7 @@ GROUP BY artist
 ORDER BY total_revenue DESC
 LIMIT 5;
 ```
+[View Output](output/artists_with_the_highest_total_revenue.csv)
 
 ### 2. Highest Grossing Tours
 Find the most successful tours based on revenue.
@@ -296,6 +297,7 @@ GROUP BY tour_title, artist
 ORDER BY total_revenue DESC
 LIMIT 10;
 ```
+[View Output](output/the_most_successful_tours_based_on_revenue.csv)
 
 ### 3. Shows vs Revenue Relationship
 Analyze whether more shows lead to higher revenue.
@@ -307,6 +309,7 @@ FROM female_tours_clean
 GROUP BY shows
 ORDER BY shows;
 ```
+[View Output](output/shows_vs_revenue.csv)
 
 ### 4. Revenue Trends Over Time
 Track how tour revenue changes by year.
@@ -318,6 +321,7 @@ FROM female_tours_clean
 GROUP BY start_year
 ORDER BY start_year;
 ```
+[View Output](output/revenue_trend_over_time.csv)
 
 ### 5. Average Performance by Artist
 Compare average gross earnings per artist.
@@ -329,6 +333,7 @@ FROM female_tours_clean
 GROUP BY artist
 ORDER BY avg_gross DESC;
 ```
+[View Output](output/Average_Performance_by_Artist.csv)
 
 ---
 
