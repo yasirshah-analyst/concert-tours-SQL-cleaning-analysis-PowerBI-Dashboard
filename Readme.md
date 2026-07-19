@@ -391,6 +391,45 @@ ORDER BY avg_gross DESC;
 
 ---
 
+## 🔍 Findings (Insights)
+
+| # | Finding | Supporting Query |
+|---|---|---|
+| 1 | Revenue is concentrated in a small number of top artists — the top 5 account for roughly **_85 %_** of total revenue in the dataset | Q1 |
+| 2 | The single highest-grossing tour was **_"The Eras Tour"_**, generating **$_780000000_** | Q2 |
+| 3 | More shows does not reliably mean more revenue — e.g. **_"The Eras Tour" had fewer shows but higher total revenue than "Living Proof: The Farewell Tour" which had most shows_** | Q3 |
+| 4 | Revenue peaked in **_2023_** and was lowest in **_2006_** | Q4 |
+| 5 | **_"Taylor Swift"_** had the highest average revenue per tour, even if not the highest total — suggesting consistency over volume | Q5 |
+
+---
+
+## 💡 Recommendations
+
+Based on the findings above, if this were a real business engagement:
+
+1. **Book more tours with the top-earning artists** — Q1 and Q5 show which artists make the most money, so it's safer to work with them again.
+2. **Book fewer, high-value shows instead of long tours.** — Q3 shows that having more shows doesn't always mean more money. It's better to look at how much each show earns, not just how many shows there are.
+3. **Look at the high and low revenue years in Q4** —Match them against external events—like economic changes, big album drops, or tour breaks—to understand why the changes happened, not just when.
+4. **Don't judge an artist only by total earnings** — Q5 shows some artists earn a lot *on average* per tour, even if they haven't done many tours. These artists could still be a good choice, even if their total is lower than bigger names.
+
+---
+
+## 📊 Business Impact
+
+These insights can help a booking or promotion company:
+
+- Make better artist partnership decisions using past revenue data instead of guesswork
+- nvest in tours that are more likely to generate higher revenue
+- Use a simple data-driven approach to evaluate new artists before signing deals or partnerships
+
+---
+
+## ✅ Outcome
+
+This project shows the complete data analysis process—from cleaning a messy and inconsistent dataset in SQL to generating insights that can support real business decisions. The cleaning techniques used, such as removing unwanted symbols, fixing data types, and creating new useful fields, can also be applied to other messy datasets in the future.
+
+---
+
 ## 🛠️ SQL Skills Used
 
 - Data Cleaning with SQL
@@ -402,18 +441,6 @@ ORDER BY avg_gross DESC;
 - Grouping and sorting data
 - Data type conversion
 - Feature engineering
-
----
-
-## 🔍 Findings (Insights)
-
-| # | Finding | Supporting Query |
-|---|---|---|
-| 1 | Revenue is concentrated in a small number of top artists — the top 5 account for roughly **_85 %_** of total revenue in the dataset | Q1 |
-| 2 | The single highest-grossing tour was **_"The Eras Tour"_**, generating **$_780000000_** | Q2 |
-| 3 | More shows does not reliably mean more revenue — e.g. **_"The Eras Tour" had fewer shows but higher total revenue than "Living Proof: The Farewell Tour" which had most shows_** | Q3 |
-| 4 | Revenue peaked in **_2023_** and was lowest in **_2006_** | Q4 |
-| 5 | **_"Taylor Swift"_** had the highest average revenue per tour, even if not the highest total — suggesting consistency over volume | Q5 |
 
 ---
 
