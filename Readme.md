@@ -452,6 +452,61 @@ This project shows the complete data analysis process—from cleaning a messy an
 
 ---
 
+---
+
+## 📊 Power BI Report
+
+To complement the SQL analysis, I built an interactive Power BI report on top of the cleaned dataset (`female_tours_clean`) to make the insights visual and explorable.
+
+### 🖼️ Report Preview
+
+![Power BI Dashboard](dashboard/dashboard.png)
+
+---
+
+### 🧩 What's on the report
+
+**KPI Cards**
+- Total Revenue (all tours combined)
+- Average Revenue per Tour
+- Total Artists (distinct count)
+
+**Charts**
+| Chart | Type | Purpose |
+|---|---|---|
+| Artists by Total Revenue | Bar chart | Compare total earnings across all artists |
+| Top 10 Tours by Revenue | Bar chart | Identify the single highest-grossing tours |
+| Revenue Trend Over the Years | Line chart | Show how total revenue has changed year to year |
+| Shows vs Revenue by Tour | Scatter chart | Check whether more shows actually means more revenue, tour by tour |
+
+**Filters**
+- Slicer by **Year** — filter every visual to a specific year or range
+- Slicer by **Artist** — filter every visual to a specific artist's tours
+
+### 🧮 DAX Measures Used
+
+```dax
+Total Revenue = SUM(female_tours_clean[actual gross($)])
+Average Revenue per Tour = AVERAGE(female_tours_clean[actual gross($)])
+Total Artists = DISTINCTCOUNT(female_tours_clean[artist])
+Total Revenue Display = "$" & FORMAT(SUM(female_tours_clean[actual gross($)]), "#,##0")
+```
+
+### 💡 Recommendations (shown on the report)
+
+- Prioritize bookings with top-revenue artists — they show the most consistent high returns
+- Show count alone doesn't predict revenue — evaluate per-show average, not just tour length
+- Investigate low-revenue years for external causes (economic conditions, fewer major tours, etc.)
+- Use average revenue, not just total revenue, when evaluating newer or less prolific artists
+
+### 🛠️ Tools Used
+
+- Power BI Desktop
+- DAX (Data Analysis Expressions)
+- Data source: cleaned CSV output from the SQL cleaning step above
+
+---
+
 ## 👤 Author
 
 - Yasir Shah
@@ -459,10 +514,3 @@ This project shows the complete data analysis process—from cleaning a messy an
 
 ---
 
-## ⭐ Purpose
-
-This project is part of my data analytics learning journey to practice:
-
-- Real-world SQL data cleaning
-- Business problem solving
-- Portfolio building for analytics roles
