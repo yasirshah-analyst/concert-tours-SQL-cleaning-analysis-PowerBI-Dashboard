@@ -510,7 +510,15 @@ Total Revenue Display = "$" & FORMAT(SUM(female_tours_clean[actual gross($)]), "
 ## 👤 Author
 
 - Yasir Shah
-- SQL Portfolio Project
+- Data Analyst | SQL | Power BI | Excel
+
+---
+
+## Connect
+
+- www.linkedin.com/in/yasir-shah-2364183b3
+- https://github.com/yasirshah-analyst
+- shahyasir443@gmail.com
 
 ---
 
