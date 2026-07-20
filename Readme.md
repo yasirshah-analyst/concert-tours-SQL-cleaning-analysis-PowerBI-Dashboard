@@ -487,8 +487,11 @@ To complement the SQL analysis, I built an interactive Power BI report on top of
 
 ```dax
 Total Revenue = SUM(female_tours_clean[actual gross($)])
+
 Average Revenue per Tour = AVERAGE(female_tours_clean[actual gross($)])
+
 Total Artists = DISTINCTCOUNT(female_tours_clean[artist])
+
 Total Revenue Display = "$" & FORMAT(SUM(female_tours_clean[actual gross($)]), "#,##0")
 ```
 
