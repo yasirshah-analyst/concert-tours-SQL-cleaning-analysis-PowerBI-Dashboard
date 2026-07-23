@@ -1,4 +1,4 @@
-# 🎤 Female Concert Tours SQL Data Analysis
+# 🎤 Female Concert Tours Data Cleaning, Analysis & Visualization
 
 ## 📌 Project Overview
 This project is an end-to-end **SQL Data Cleaning and Business Analysis** using a kaggle dataset.
