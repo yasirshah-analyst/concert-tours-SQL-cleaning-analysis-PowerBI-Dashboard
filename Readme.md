@@ -49,19 +49,28 @@ The dataset contains information about female concert tours, including:
 ## 📁 Project Structure
 
 ```
-concert-tours-sql-analysis/
+female-concert-tours-sql-powerbi-analysis/
 │
-├── SQL/
+├── sql/
 │   └── female_tours_sql_project.sql
 │
-├── Data/
-│   ├── Raw/
-│   │   └── female_tours_dirty.csv.csv
-│   │
-│   └── Clean/
-│       └── female_tours_clean.csv.csv
+├── data/
+│   ├── clean/
+│   │   └── female_tours_clean.csv
+│   └── raw/
+│       └── female_tours_dirty.csv
 │
-└── Readme.md
+├── dashboard/
+│   └── dashboard.png
+│
+├── output/
+│   ├── artists_with_the_highest_total_revenue.csv
+│   ├── the_most_successful_tours_based_on_revenue.csv
+│   ├── shows_vs_revenue.csv
+│   ├── revenue_trend_over_time.csv
+│   └── average_performance_by_artist.csv
+│
+└── README.md
 ```
 
 ---
